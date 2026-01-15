@@ -429,26 +429,27 @@ img {
 
 /* --- FOOTER --- */
 .footer {
-    background-color: #1a1a1a;
+    background-color: #1a1a10;
+    /* Darker, slightly warm as in screenshot */
     color: #ffffff;
-    padding: 4rem 0 2rem;
+    padding: 3rem 0;
+    /* More compact */
     text-align: center;
-    border-top: 1px solid #333;
 }
 
 .footer__contact {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
-    line-height: 1.8;
-    /* Added for multi-line readability */
+    line-height: 1.6;
 }
 
 .footer__socials {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    /* Reduced to match screenshot */
 }
 
 .footer__social-link {
@@ -580,8 +581,9 @@ img {
     }
 
     .footer__socials {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
 
     /* Social section */
