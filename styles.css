@@ -263,7 +263,7 @@ img {
     font-size: 4rem;
     color: var(--title-color);
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 2rem;
 }
 
@@ -444,9 +444,9 @@ img {
 
 .footer__contact {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .footer__socials {
