@@ -1,16 +1,17 @@
-/* Base Variables based on Vityaz site */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap');
+
 :root {
     --primary-color: #FF7A3D;
-    /* Orange from site */
+/* Orange from site */
     --secondary-color: #FF5100;
-    /* Darker orange */
+/* Darker orange */
     --text-color: #575250;
     --title-color: #1E1810;
     --bg-color: #F8F5F4;
     --white-color: #FFFFFF;
 
     --body-font: 'Noto Sans', sans-serif;
-    --title-font: 'Montserrat', sans-serif;
+    --title-font: 'Playfair Display', serif;
 }
 
 * {
