@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Гостевой дом "Клевер"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <div class="nav__header">
+                <a href="index.html" class="nav__logo">
+                    <img src="assets/img/logo.png" alt="Клевер Лого">
+                </a>
+                <div class="nav__controls">
+                    <div class="nav__phone">8-905-495-95-96</div>
+                    <button class="nav__toggle">
+                        <span class="nav__icon"></span>
+                    </button>
+                </div>
+            </div>
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link active">Главная</a></li>
+                <li><a href="cottages.html" class="nav__link">Коттеджи</a></li>
+                <li><a href="environment.html" class="nav__link">Наше окружение</a></li>
+                <li><a href="rules.html" class="nav__link">Правила проживания</a></li>
+                <li><a href="booking.html" class="nav__link">Бронирование</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Using an inline style for the background image to keep it hotlinked easily -->
+    <section class="hero"
+        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/img/hero_pool.png'); background-size: cover; background-position: center; color: white; padding: 8rem 0;">
+        <div class="container">
+            <h2 class="hero__subtitle" style="color: white;">Гостевой дом на берегу Азовского моря</h2>
+            <h1 class="hero__title" style="color: white;">«КЛЕВЕР»</h1>
+            <a href="cottages.html" class="button">Узнать больше</a>
+        </div>
+    </section>
+
+    <!-- Cottages Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section__title">Наши коттеджи</h2>
+
+            <div class="cards__container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="assets/фото/nashi_domiki/photo_2026-01-09_11-46-18.jpg" alt="Новые коттеджи"
+                        class="card__img">
+                    <div class="card__content">
+                        <h3 class="card__title">Новые коттеджи</h3>
+                        <p class="card__text">Новые, красивые и стильные коттеджи!</p>
+                        <a href="cottages.html" class="button">Узнать больше</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="assets/фото/nashi_domiki/photo_2026-01-09_11-32-11.jpg" alt="Новый интерьер"
+                        class="card__img">
+                    <div class="card__content">
+                        <h3 class="card__title">Новый интерьер</h3>
+                        <p class="card__text">В коттедже есть все необходимое для вашего комфортного отдыха!</p>
+                        <a href="cottages.html" class="button">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about__container">
+                <div class="about__content">
+                    <h2 class="section__title" style="text-align: left; margin-bottom: 1.5rem;">Наш гостевой дом</h2>
+                    <p class="about__text">
+                        Всего 300 метров от моря ( пять минут ходьбы) располагаются комфортабельные новые 2-х комнатные
+                        коттеджи со всеми удобствами на 4 +1 чел., 6+1 чел,со встроенной кухней ( полный комплект
+                        посуды,индукционная и микроволновая печи,холодильник), постельное белье, банные полотенца,
+                        телевизор ,сплит-система, скоростной Wi-Fi,собственная терраса с садовой мебелью
+                    </p>
+                    <br>
+                    <a href="cottages.html" class="button">Узнать больше</a>
+                </div>
+                <!-- Using the interior image again or another decorative one -->
+                <div class="about__img">
+                    <img src="assets/фото/nashi_domiki/3.jpg" style="border-radius: 8px;" alt="Интерьер">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comfort Section -->
+    <section class="section" style="background-color: #FFFFFF;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="section__title"
+                        style="text-align: left; margin-bottom: 2rem; font-size: 2.5rem; line-height: 1.2; text-transform: uppercase;">
+                        У НАС ЕСТЬ ВСЕ<br>ДЛЯ ВАШЕГО<br>КОМФОРТА
+                    </h2>
+                    <div style="width: 60px; height: 4px; background-color: var(--primary-color); margin-bottom: 2rem;">
+                    </div>
+                    <p class="about__text" style="margin-bottom: 2rem; color: #555;">
+                        Каждый наш коттедж оборудован всем необходимым для самостоятельного приготовления пищи: полный
+                        комплект посуды, индукционная и микроволновая печи, холодильник, бесперебойная подача горячей и
+                        холодной воды. Также на участке находятся мангалы, к которым подведена вода. Что может быть
+                        лучше
+                        вкуснейших изысков прям с костра!
+                    </p>
+                    <a href="cottages.html" class="button">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+
+                <!-- Right Images Grid -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <img src="assets/фото/nashi_domiki/ком_1.jpg" alt="Спальня"
+                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="assets/фото/nashi_domiki/ком_2.jpg" alt="Кухня"
+                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="assets/фото/nashi_domiki/ком_3.jpg" alt="Бассейн"
+                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="assets/фото/nashi_domiki/ком_4.jpg" alt="Гостиная"
+                        style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restored Social Media Section (White Block) -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contact">
+                Краснодарский край, станица Должанская, улица Кирова 1/3 | Телефон: 8-905-495-95-96 | Email:<br>
+                ignatoff999@mail.ru
+            </div>
+            <div class="footer__socials">
+                <a href="https://vk.ru/club211665233" class="footer__social-link" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M13.162 18.994c-6.098 0-10.435-4.175-10.58-11.107h3.332c.1 5.07 2.33 7.217 4.103 7.665V7.887h3.132v4.37c1.92-.206 3.738-2.203 4.42-4.37h3.132a8.818 8.818 0 01-4.04 5.922 9.017 9.017 0 014.86 6.185h-3.432a6.388 6.388 0 00-4.94-3.8V18.994z" />
+                    </svg>
+                    VK
+                </a>
+                <a href="https://www.instagram.com/gostevoy_dom_clever_?igsh=a3pucXYxeG0zOHg%3D&utm_source=qr"
+                    class="footer__social-link" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.225.144 4.77 1.69 4.915 4.915.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.144 3.225-1.69 4.77-4.915 4.915-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.225-.144-4.77-1.69-4.915-4.915-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.144-3.225 1.69-4.77 4.915-4.915 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.28.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                    Instagram
+                </a>
+            </div>
+            <p class="footer__copyright">2026 Гостевой дом "Витязь" на берегу Азовского моря в ст. Должанская</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
