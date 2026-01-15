@@ -593,16 +593,15 @@ img {
 
     /* Alternating sections */
     .section-alt {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "content"
-            "mainimg";
+        display: flex !important;
+        flex-direction: column !important;
         gap: 1.5rem;
         margin-bottom: 4rem;
     }
 
     .section-alt__content {
         text-align: center;
+        order: 1 !important;
     }
 
     .section-alt__content h2,
@@ -610,10 +609,15 @@ img {
         text-align: center;
     }
 
+    .section-alt__img {
+        order: 2 !important;
+    }
+
     .section-alt__img>img {
         max-height: 300px;
         margin: 0 auto;
         display: block;
+        width: 100%;
     }
 
     /* Sub galleries - HIDE on mobile */
