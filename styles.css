@@ -2,16 +2,16 @@
 
 :root {
     --primary-color: #FF7A3D;
-/* Orange from site */
+    /* Orange from site */
     --secondary-color: #FF5100;
-/* Darker orange */
+    /* Darker orange */
     --text-color: #575250;
     --title-color: #1E1810;
     --bg-color: #F8F5F4;
     --white-color: #FFFFFF;
 
     --body-font: 'Noto Sans', sans-serif;
-    --title-font: 'Playfair Display', serif;
+    --title-font: 'Montserrat', sans-serif;
 }
 
 * {
@@ -259,7 +259,7 @@ img {
 }
 
 .hero__title {
-    font-family: var(--title-font);
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     color: var(--title-color);
     text-transform: uppercase;
