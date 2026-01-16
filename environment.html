@@ -18,6 +18,19 @@
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 3rem;
             margin-top: 3rem;
+            justify-content: center;
+        }
+
+        .nearby-item--centered {
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        @media (min-width: 1200px) {
+            .nearby-item--centered {
+                grid-column: 1 / -1;
+            }
         }
 
         .nearby-item {
@@ -141,8 +154,9 @@
                         <img src="assets/фото/environment/shore.jpg" alt="Берег Азовского моря">
                         <div class="nearby-item__content">
                             <h3 class="nearby-item__title">Берег Азовского моря</h3>
-                            <p class="nearby-item__text">Чистое море и приятный берег позволят вам прекрасно провести
-                                время.</p>
+                            <p class="nearby-item__text">Чистое море и Приятный берег из мелкой ракушки с песком
+                                позволят вам
+                                прекрасно провести время.</p>
                         </div>
                     </div>
 
@@ -176,22 +190,13 @@
                         </div>
                     </div>
 
-                    <!-- Item 5 -->
-                    <div class="nearby-item">
-                        <img src="assets/фото/environment/kb.jpg" alt="Красное&Белое">
+                    <!-- Item 5 (Consolidated) -->
+                    <div class="nearby-item nearby-item--centered">
+                        <img src="assets/фото/environment/pyaterochka_v2.png" alt="Сетевые магазины">
                         <div class="nearby-item__content">
-                            <h3 class="nearby-item__title">Красное&Белое</h3>
-                            <p class="nearby-item__text">Магазин, в котором можно приобрести различные напитки и
-                                продукты.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="nearby-item">
-                        <img src="assets/фото/environment/pyaterochka_v2.png" alt="Пятёрочка">
-                        <div class="nearby-item__content">
-                            <h3 class="nearby-item__title">Пятёрочка</h3>
-                            <p class="nearby-item__text">Магазин со всеми необходимыми продуктами.</p>
+                            <h3 class="nearby-item__title">Сетевые магазины</h3>
+                            <p class="nearby-item__text">Множество сетевых магазинов с продуктами
+                                питания,алкомаркеты,аптеки.</p>
                         </div>
                     </div>
                 </div> <!-- End nearby-grid -->
