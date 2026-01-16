@@ -391,11 +391,44 @@
         let currentIndex = 0;
         let zoomScale = 1;
 
-        function updateGallery() {
-            galleryImages = Array.from(document.querySelectorAll('img')).filter(img => {
-                const src = img.getAttribute('src') || '';
-                return src.includes('assets/') || src.includes('hero_pool');
+        // Initialize Mini-Albums
+        function initMiniAlbums() {
+            const galleries = document.querySelectorAll('.sub-gallery');
+            galleries.forEach(gallery => {
+                const thumbs = gallery.querySelectorAll('img');
+                const section = gallery.closest('.section-alt');
+                if (!section) return;
+                const mainImg = section.querySelector('.section-alt__img img');
+                if (!mainImg) return;
+
+                thumbs.forEach(thumb => {
+                    thumb.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent lightbox open
+                        mainImg.src = thumb.src;
+
+                        // Update active state
+                        thumbs.forEach(t => t.classList.remove('active'));
+                        thumb.classList.add('active');
+                    });
+                });
+
+                // Set initial active state if matches main image
+                thumbs.forEach(thumb => {
+                    if (thumb.src === mainImg.src) {
+                        thumb.classList.add('active');
+                    }
+                });
             });
+        }
+
+        function updateGallery() {
+            // Lightbox should now primarily focus on the general gallery and main section images
+            // We'll collect images from the main gallery grid and the section-alt__img areas
+            const mainGalleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
+            const sectionMainImages = Array.from(document.querySelectorAll('.section-alt__img img'));
+            const introImages = Array.from(document.querySelectorAll('.sub-gallery img')); // Keep these in too if user wants to see them full screen
+
+            galleryImages = [...sectionMainImages, ...mainGalleryImages, ...introImages];
 
             imageUrls = galleryImages.map(img => img.src);
 
@@ -416,8 +449,12 @@
             galleryImages.forEach((img, index) => {
                 img.style.cursor = 'pointer';
                 img.onclick = (e) => {
-                    e.preventDefault();
-                    openLightbox(index);
+                    // Only open lightbox if it's NOT a thumbnail click that was already handled
+                    // and we want main images/gallery images to open lightbox
+                    if (!img.parentElement.classList.contains('sub-gallery')) {
+                        e.preventDefault();
+                        openLightbox(index);
+                    }
                 };
             });
         }
@@ -494,6 +531,7 @@
             if (e.key === '-') zoomOut();
         });
 
+        initMiniAlbums();
         updateGallery();
     </script>
 

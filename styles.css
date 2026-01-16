@@ -637,13 +637,21 @@ img {
         width: 100%;
     }
 
-    /* Sub galleries - HIDE on mobile */
+    /* Sub galleries - ENABLE on mobile for mini-album */
     .sub-gallery {
-        display: none !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+        order: 3 !important;
     }
 
     .sub-gallery.expanded {
-        display: none !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+        order: 3 !important;
     }
 
     /* Gallery grid */
@@ -750,16 +758,22 @@ img {
 
 .sub-gallery img {
     width: 100%;
-    height: 200px;
+    height: 100px;
     /* Consistent height for horizontal alignment */
-    object-fit: contain;
-    /* No cropping, as requested */
+    object-fit: cover;
+    /* Changed to cover for better thumbnail look */
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.2s;
+    border: 2px solid transparent;
 }
 
 .sub-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.sub-gallery img.active {
+    border-color: var(--primary-color);
     transform: scale(1.05);
 }
 
