@@ -640,7 +640,7 @@ img {
     /* Sub galleries - ENABLE on mobile for mini-album */
     .sub-gallery {
         display: grid !important;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
         gap: 0.5rem;
         margin-top: 1rem;
         order: 3 !important;
@@ -648,7 +648,7 @@ img {
 
     .sub-gallery.expanded {
         display: grid !important;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
         gap: 0.5rem;
         margin-top: 1rem;
         order: 3 !important;
@@ -752,7 +752,7 @@ img {
 
 .sub-gallery.expanded {
     grid-area: gallery;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     margin-top: 2rem;
 }
 
